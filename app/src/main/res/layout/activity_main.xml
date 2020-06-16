@@ -1,132 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#051E3E"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="208dp"
-        android:layout_height="218dp"
-        android:src="@drawable/icono"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="18dp" />
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/username"
-        android:layout_width="330dp"
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:hint="@string/email"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="24dp"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:hint="Contraseña"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        android:id="@+id/etPassword"
+        style="@style/viewCustom"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/btnround"
-        android:enabled="false"
-        android:text="Iniciar Sesión"
-        android:textColor="@color/btn2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/btnLogin"
+        style="@style/viewCustom"
+        android:background="@color/colorPrimary"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="login"/>
 
 
-    <Button
-        android:id="@+id/registro"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/btncolor"
-        android:enabled="false"
-        android:text="Registrarse"
-        android:textColor="@color/btn2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.016" />
+   <Button
+           android:id="@+id/create"
+           style="@style/viewCustom"
+           android:background="@color/colorPrimary"
+           android:text="@string/createAct"
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:onClick="register"/>
 
-    <ImageView
-        android:id="@+id/google"
-        android:layout_width="55dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/google" />
-
-    <Button
-        android:id="@+id/olvido"
-        android:layout_width="209dp"
-        android:layout_height="45dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="#00FFFFFF"
-        android:enabled="false"
-        android:text="Olvidé mi contraseña"
-        android:textColor="@color/btn2"
-        android:textColorHighlight="#00FFFFFF"
-        android:textColorHint="#00FFFFFF"
-        android:textColorLink="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.337"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        style="@style/viewCustom"
+        android:layout_below="@id/btnLogin"
+        android:onClick="forgotPassword"
+        android:gravity="center_horizontal"
+        android:text="@string/forgotPassword"
+        android:textSize="20sp" />
+</LinearLayout>

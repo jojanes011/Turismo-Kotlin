@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "913329600592",
+    "firebase_url": "https://turismokotlin.firebaseio.com",
+    "project_id": "turismokotlin",
+    "storage_bucket": "turismokotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913329600592:android:e1560d6939826bbda7f955",
+        "android_client_info": {
+          "package_name": "com.example.turismokotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913329600592-1je7s7esj62eo3n9dligtlr4krrj1mot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhNcecifEKncTPuLoFHJwLwcp9sGiMU6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913329600592-1je7s7esj62eo3n9dligtlr4krrj1mot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

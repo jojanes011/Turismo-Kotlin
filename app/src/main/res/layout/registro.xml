@@ -1,151 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#051E3E"
-    tools:context=".Registro">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="@color/btn"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/txtName"
+        style="@style/viewCustom"
+    android:hint="@string/firstName"
+    android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        style="@style/viewCustom"
+    android:hint="@string/lastName"
+    android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        style="@style/viewCustom"
+        android:hint="@string/email"
+    android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        style="@style/viewCustom"
+    android:hint="@string/password"
+    android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="58dp"
-        android:layout_height="56dp"
-        android:background="@drawable/back_foreground"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="167dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="4dp"
-        android:text="Registrarse"
-        android:textColor="@color/btn2"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="66dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crea tu cuenta"
-        android:textSize="40dp"
-        android:textColor="@color/btn2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="94dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="400dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nombres"
-        android:textColor="@color/btn2"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="400dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Apellidos"
-        android:textColor="@color/btn2"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="E-mail"
-        android:textColor="@color/btn2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="Contraseña"
-        android:textColor="@color/btn2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="410dp" />
-
-    <Button
-        android:id="@+id/registrarse"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="196dp"
-        android:background="@drawable/btnround"
-        android:enabled="false"
-        android:text="Registrarse"
-        android:textColor="@color/btn2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/olvido"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="136dp"
-        android:backgroundTint="#00FFFFFF"
-        android:enabled="false"
-        android:text="¿Ya tienes una cuenta? Inica sesión"
-        android:textColor="@color/btn2"
-        android:textColorHighlight="#00FFFFFF"
-        android:textColorHint="#00FFFFFF"
-        android:textColorLink="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        style="@style/viewCustom"
+    android:onClick="register"
+    android:background="@color/colorAccent"
+    android:text="@string/createAct"
+    android:textColor="@android:color/white"
+    android:textStyle="bold" />
+</LinearLayout>

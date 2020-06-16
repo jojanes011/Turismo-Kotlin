@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TurismoKotlin</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="forgotPassword">Olvidaste tu contraseña?</string>
+    <string name="firstName">Nombre</string>
+    <string name="lastName">Apellido</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="createAct">Crear cuenta</string>
 </resources>
